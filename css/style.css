@@ -10,6 +10,19 @@ body {
 	font-size:14px;
 	color:#333;
 }
+#blog_bg{
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    z-index: -2;
+	    position: fixed;
+	    transition: all .3s;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-position: 50% 50%;
+}
 .banner {
 	padding-top:80px;
 }
@@ -69,7 +82,7 @@ body {
 	z-index:99;
 }
 .slide1 {
-	background:url(../images/p3.jpg) no-repeat right 50%/auto 100% #fff;
+	background:url(../images/下载.jpg) no-repeat right 50%/auto 100% #fff;
 }
 .slide2 {
 	background:url(../images/p2.jpg) no-repeat right 50%/auto 100% #e2e3e8;

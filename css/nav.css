@@ -1,9 +1,18 @@
 ul {
 	list-style-type: none;
-	padding: 0;
-	margin: 0;
+	padding: 0 12.5rem;
+	margin: 0,auto;
 }
-
+.logo{
+	width: 50px;
+    height: 50px;
+	border-radius:50%;
+    vertical-align:middle;
+}
+.v-align-middle {
+    vertical-align: middle !important;
+	size: 1rem;
+}
 #nav>ul>li {
 	text-align: center;
 	float: left;
@@ -15,7 +24,7 @@ a {
 	/*垂直排列，且点击区域为方块*/
 	width: 100px;
 	/*block可设置width*/
-	line-height: 40px;
+	line-height: 64px;
 	/*获得垂直居中效果*/
 	text-decoration: none;
 	color: rgb(133, 119, 114);
