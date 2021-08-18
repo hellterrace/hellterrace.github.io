@@ -1,17 +1,14 @@
 {
-  "dir": "auto",
   "display": "fullscreen",
   "name": "BoringのMonster",
   "short_name": "BoringのMonster",
-  "scope": "/",
-  "lang": "en",
-  "description": "placeholder description",
-  "theme_color": "none",
-  "background_color": "none"
-  "icons": 
-	{
-	  "src" :"public/css/images/favicon.ico",
-	  "sizes": "16x16",
-	  "type": "image/ico"
-	}
+  "start_url": "./index.html",
+  "scope": ".",
+  "icons": [
+	    {
+	        "src": "css/images/favicon.png",
+	        "sizes": "16x16",
+	        "type": "image/png"
+	    }
+	]
 }
