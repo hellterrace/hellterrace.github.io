@@ -3,7 +3,17 @@ self.addEventListener('install', (e) => {
     caches.open('fox-store').then((cache) => cache.addAll([
       './',
       './index.html',
+      './sw.js',
+      './js/jquery-3.3.1.min.js',
+      './js/script.js',
+      './js/navigation.js',
       './js/index.js',
+      './js/share.js',
+      './css/images/body.jpg',
+      './css/images/1.jpg',
+      './css/images/2.jpg',
+      './css/images/fox-icon.png',
+      './css/style.css',
     ])),
   );
 });
