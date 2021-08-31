@@ -12,7 +12,7 @@ self.addEventListener('install', (e) => {
       './css/images/body.jpg',
       './css/images/1.jpg',
       './css/images/2.jpg',
-      './css/images/fox-icon.png',
+      './css/images/icon.png',
       './css/style.css',
     ])),
   );
