@@ -171,6 +171,13 @@
 <script src="/js/script.js"></script>
 	  <script src="/js/index.js"></script>
 
+<script> 
+	 if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('./sw.js')
+    .then(() => { console.log('Service Worker Registered'); });
+}
+	  </script>
 
 <script src="/js/navigation.js"></script>
 
