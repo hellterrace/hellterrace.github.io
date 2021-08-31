@@ -1,39 +1,15 @@
-var cacheStorageKey = 'minimal-pwa-1';
-
-var cacheList = [
-  '/',
-  "index.html",
-  "logo.png"
-];
-self.addEventListener('install', e => {
+self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open(cacheStorageKey)
-    .then(cache => cache.addAll(cacheList))
-    .then(() => self.skipWaiting())
-  )
+    caches.open('fox-store').then((cache) => cache.addAll([
+      './',
+      './index.html',
+      './js/index.js',
+    ])),
+  );
 });
-self.addEventListener('fetch', function(e) {
+self.addEventListener('fetch', (e) => {
+  console.log(e.request.url);
   e.respondWith(
-    caches.match(e.request).then(function(response) {
-      if (response != null) {
-        return response
-      }
-      return fetch(e.request.url)
-    })
-  )
-});
-self.addEventListener('activate', function(e) {
-  e.waitUntil(
-    Promise.all(
-      caches.keys().then(cacheNames => {
-        return cacheNames.map(name => {
-          if (name !== cacheStorageKey) {
-            return caches.delete(name)
-          }
-        })
-      })
-    ).then(() => {
-      return self.clients.claim()
-    })
-  )
+    caches.match(e.request).then((response) => response || fetch(e.request)),
+  );
 });
